@@ -1,0 +1,17 @@
+<div class="container">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+        </style>
+    <h2>Thank you for registering, {{ register.first | uppercase }}!</h2>
+    <h4>Here is your login information:</h4>
+  <div class="wrapper">
+    <p> E-mail: {{ register.email | uppercase }}</p>
+    <p> Name: {{ register.first | firstUppercase }} {{ register.last | firstUppercase}}</p>
+    <p> Password: {{register.password }}</p>
+    <p> Birth Year: {{ register.birthyear }}</p>
+    
+  </div>
+  <button routerLink="" class="btn btn-secondary">Logout</button><br>
+  <button routerLink="/inbox"  class="btn btn-info">Continue to e-mail</button>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,17 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+    </style>
+<div class="container">
+    <form class="wrapper" [formGroup]="home">
+      <h2>Login to your PetalMail Account</h2>
+    <div class="col xs-4">
+        <label>E-mail</label>
+        <input type="text" formControlName="email">
+        </div>
+      <label>Password</label>
+      <input type="password" formControlName="password">
+    </form>
+    <button class="btn btn-success" type="submit" [disabled]="!home.valid" (click)="onSubmitButton()">Login</button>
+    <button class="btn btn-warning" routerLink='/'>Create Account</button>
+  </div>
+  <router-outlet></router-outlet>

@@ -1,0 +1,34 @@
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+    </style>
+<div class="container">
+    <form class="wrapper" [formGroup]="home">
+
+      <h2>Register for an account with us at PetalMail</h2>
+    
+    <div class="col xs-3">
+      <label>First Name</label>
+      <input type="text" formControlName="firstName">
+    
+      <label>Last Name</label>
+      <input type="text" formControlName="lastName">
+    </div>
+    <div class="col xs-3">
+    <div class="col xs-4">
+        <label>E-mail</label>
+        <input  type="text" formControlName="email">
+        </div>
+      <label>Password</label>
+      <input type="password" formControlName="password">
+      <h6>Password must be at least 8 characters long.</h6>
+    
+      <label>Birth Year</label>
+      <input placeholder="####" type="text" formControlName="birthyear">
+    </div>
+    
+    </form>
+    <button class="btn btn-success" type="submit" [disabled]="!home.valid" (click)="onSubmitButton()">Submit</button>
+  
+  </div>
+  <router-outlet></router-outlet>

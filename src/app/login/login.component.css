@@ -1,0 +1,31 @@
+.container{
+    padding-top: 20vh;
+    background-image: url('office.jpg');
+    height: 800px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    width: 100%;
+}
+
+h2{
+    text-align: left;
+    font-family: 'Shadows Into Light', cursive;
+}
+label{
+    font-size: 20px;
+    font-family: 'Shadows Into Light', cursive;
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+input{
+    color: purple;
+    
+}
+button{
+    margin-top: 15px;
+    display:flex;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+}
