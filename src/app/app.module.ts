@@ -13,7 +13,7 @@ import { ArchivedComponent } from './inbox/archived/archived.component';
 import { SentComponent } from './inbox/sent/sent.component';
 import { SpamComponent } from './inbox/spam/spam.component';
 import { TrashComponent } from './inbox/trash/trash.component';
-import { TimeoutService } from './timeout.service';
+
 
 
 const appRoutes: Routes = [
@@ -24,8 +24,7 @@ const appRoutes: Routes = [
   { path: 'archived', component: ArchivedComponent },
   { path: 'sent', component: SentComponent },
   { path: 'spam', component: SpamComponent },
-  { path: 'trash', component: TrashComponent },
-  { path: 'timeoutService', component: TimeoutService }
+  { path: 'trash', component: TrashComponent }
 ];
 
 @NgModule({
@@ -47,7 +46,6 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [TimeoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
