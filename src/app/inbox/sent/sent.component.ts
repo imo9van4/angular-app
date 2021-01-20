@@ -1,7 +1,3 @@
-import { Component, OnInit } from '@angular/core';
-
-
-
 @Component({
     selector: 'app-sent',
     templateUrl: './sent.component.html',
@@ -9,14 +5,28 @@ import { Component, OnInit } from '@angular/core';
   })
 
   export class SentComponent implements OnInit {
+    register;
+    useractivityTimer;
 
-    constructor() {}
+    @HostListener('window:mousemove') logoutUser() { 
+      console.log('it works');
+      clearTimeout(this.useractivityTimer);
+      this.useractivityTimer=setTimeout(()=>this.router.navigate(['login']), 180000);
+    }
+
+    constructor(private route: ActivatedRoute, private router: Router) {
+      this.route.queryParams.subscribe(params => {
+        this.register = params
+        console.log(params)
+      })
+    }
         
         ngOnInit(): void {
          
         }
         
         }
+  
   
   
         
