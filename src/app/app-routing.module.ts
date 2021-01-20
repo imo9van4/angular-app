@@ -8,7 +8,7 @@ import { ArchivedComponent } from './inbox/archived/archived.component';
 import { SentComponent } from './inbox/sent/sent.component';
 import { SpamComponent } from './inbox/spam/spam.component';
 import { TrashComponent } from './inbox/trash/trash.component';
-import { TimeoutService } from './timeout.service';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,7 +23,6 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule],
-  providers: [TimeoutService]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
