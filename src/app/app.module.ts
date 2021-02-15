@@ -9,10 +9,11 @@ import { UppercasePipe } from './uppercase.pipe';
 import { InboxComponent } from './inbox/inbox.component';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { ArchivedComponent } from './inbox/archived/archived.component';
+import { ContactsComponent } from './inbox/contacts/contacts.component'
 import { SentComponent } from './inbox/sent/sent.component';
 import { SpamComponent } from './inbox/spam/spam.component';
 import { TrashComponent } from './inbox/trash/trash.component';
+
 
 
 
@@ -21,7 +22,7 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'inbox', component: InboxComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'archived', component: ArchivedComponent },
+  { path: 'contacts', component: ContactsComponent },
   { path: 'sent', component: SentComponent },
   { path: 'spam', component: SpamComponent },
   { path: 'trash', component: TrashComponent }
@@ -35,7 +36,7 @@ const appRoutes: Routes = [
     UppercasePipe,
     LoginComponent,
     InboxComponent,
-    ArchivedComponent,
+    ContactsComponent,
     SentComponent,
     SpamComponent,
     TrashComponent

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TimeoutService } from './timeout.service';
+import { DisplayService } from './display.service';
 
-describe('TimeoutService', () => {
-  let service: TimeoutService;
+describe('DisplayService', () => {
+  let service: DisplayService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(TimeoutService);
+    service = TestBed.inject(DisplayService);
   });
 
   it('should be created', () => {

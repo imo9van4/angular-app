@@ -18,7 +18,7 @@
         <!--folders go here-->
         <ul>
             <li><button routerLink="/inbox" class="btn btn-light"><strong>Inbox(3)</strong></button></li>
-            <li><button routerLink="/archived" class="btn btn-light">Archived</button></li>
+            <li><button routerLink="/contacts" class="btn btn-light">Contacts</button></li>
             <li><button routerLink="/sent" class="btn btn-light">Sent</button></li>
             <li><button routerLink="/spam" class="btn btn-light">Spam</button></li>
             <li><button routerLink="/trash" class="btn btn-light">Trash</button></li>
@@ -57,7 +57,17 @@
             Hi, and welcome to your...
             </p>
         </div>
+        <h3>Saved Messages</h3>
+        <ul>
+          <li class = "saved" *ngFor = "let message of messages">
+              Subject: {{message.subject}}<br>From: <a ng-href routerLink="/contacts">{{message.sender}}</a><br>
+              <button type="button" class="btn btn-secondary" onClick=displayMessages()>Read more</button><br>
+            <br>
+            </li>
+      </ul>
     </div>
+
+    
     <div class="col-sm-6 third">
         <h6><br><br><span class= "span2">From: no-reply@petalmail.com </span></h6>
                       <!--Trash icon-->

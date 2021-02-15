@@ -18,17 +18,22 @@
         <!--folders go here-->
         <ul>
             <li><button routerLink="/inbox" class="btn btn-light">Inbox(3)</button></li>
-            <li><button routerLink="/contacts" class="btn btn-light">Contacts</button></li>
+            <li><button routerLink="/contacts" class="btn btn-light"><strong>Contacts</strong></button></li>
             <li><button routerLink="/sent" class="btn btn-light">Sent</button></li>
             <li><button routerLink="/spam" class="btn btn-light">Spam</button></li>
-            <li><button routerLink="/trash" class="btn btn-light"><strong>Trash</strong></button></li>
+            <li><button routerLink="/trash" class="btn btn-light">Trash</button></li>
         </ul>
     </div>
     <!--Column 2-->
     <div class="col-sm-8">
-        <h2 class= "center">Trash</h2>
+        <h2 class= "center">Contacts</h2>
         <hr>
-        <p>You have no messages in this folder.</p>
+        <ul>
+            <li class = "contacts" *ngFor = "let entry of entries">
+                {{entry.name}}<br><a href="mailto:{{entry.email}}">{{entry.email}}</a><br><br>
+            </li>
+        </ul>
+        
     </div>
     </div>
 </div>
